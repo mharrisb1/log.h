@@ -15,7 +15,5 @@ int main() {
   info("Application started.");
   warning("Low disk space.");
   error("Failed to open file: %s", "config.txt");
-
-  return 0;
 }
 ```
