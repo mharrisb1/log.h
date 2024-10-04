@@ -18,13 +18,14 @@ extern "C" {
 #define LOG_COLOR_BLUE   "\x1b[34m"
 #define LOG_COLOR_CYAN   "\x1b[36m"
 
+#define LOG_LEVEL_COUNT 5
+
 typedef enum {
   LOG_LEVEL_TRACE = 0,
   LOG_LEVEL_DEBUG,
   LOG_LEVEL_INFO,
   LOG_LEVEL_WARNING,
   LOG_LEVEL_ERROR,
-  LOG_LEVEL_COUNT
 } LogLevel;
 
 static const char *LEVEL_NAME[LOG_LEVEL_COUNT] = {"TRACE", "DEBUG", "INFO ",
