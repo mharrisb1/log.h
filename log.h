@@ -35,7 +35,7 @@ static const char *LEVEL_COLOR[LOG_LEVEL_COUNT] = {
     LOG_COLOR_CYAN, LOG_COLOR_BLUE, LOG_COLOR_GREEN, LOG_COLOR_YELLOW,
     LOG_COLOR_RED};
 
-static LogLevel current_log_level = LOG_LEVEL_TRACE;
+extern LogLevel current_log_level;
 
 /**
  * @brief Sets the current logging level.
@@ -45,7 +45,7 @@ static LogLevel current_log_level = LOG_LEVEL_TRACE;
  * @param level The desired log level.
  */
 static inline void set_log_level(LogLevel level) {
-  if (level >= LOG_LEVEL_TRACE && level < LOG_LEVEL_COUNT) {
+  if (level >= LOG_LEVEL_TRACE && level <= LOG_LEVEL_ERROR) {
     current_log_level = level;
   }
 }
